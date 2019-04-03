@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,13 +37,18 @@
             'p': 'undefined',
             'a': 'acfun.tv',
             's': 'sohu.com',
+            'd': 'daohang.qq.com/?fr=hmpage',
+            'f': 'fangyinghang.com/',
+            'g': 'www.google.com/',
+            'h': 'hao123.com',
+            'j': 'jirengu.com',
             'z': 'zhihu.com',
             'm': 'www.mcdonalds.com'
         }
 
         //取出localStorage 中的 aaa对应的hash
         hashInLocalStorage = JSON.parse(localStorage.getItem('aaa') || 'null')
-        if(hashInLocalStorage){
+        if (hashInLocalStorage) {
             hash = hashInLocalStorage
         }
 
@@ -53,19 +59,19 @@
             main1.appendChild(div1)
             row = keys[index] //第一个数组 第二个数组 第三个数组
             index2 = 0
-            while(index2 < row['length']){//0-9 0-8 0-6
+            while (index2 < row['length']) {//0-9 0-8 0-6
                 kbd1 = document.createElement('kbd')
                 kbd1.textContent = row[index2]
                 button1 = document.createElement('button')
                 button1.textContent = '编辑'
                 button1.id = row[index2]
-                button1.onclick = function(zzzz){
+                button1.onclick = function (zzzz) {
                     // console.log('我被点击了')
                     // zzzz['target']就是用户点击的元素
                     key = zzzz['target']['id'] //或者 console.log(zzzz.target.id)
                     x = prompt('给我一个网址') //把用户输入的网址存在x里面
                     hash[key] = x //hash变更
-                    localStorage.setItem('aaa',JSON.stringify(hash))
+                    localStorage.setItem('aaa', JSON.stringify(hash))
                     console.log(hash)
                 }
                 kbd1.appendChild(button1)
@@ -76,14 +82,15 @@
         }
 
 
-        document.onkeypress = function(zzzz){
+        document.onkeypress = function (zzzz) {
             key = zzzz['key']
             website = hash[key]
             console.log(website)
             // location.href = 'http://' + website
-            window.open('https://' + website,'_blank')
+            window.open('https://' + website, '_blank')
         }
 
     </script>
 </body>
+
 </html>
