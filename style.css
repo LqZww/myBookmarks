@@ -1,105 +1,92 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-}
-
-kbd{
-    border: 1px solid red;
-    width: 4em;
-    height: 4em;
-    display: inline-block;
-    text-transform: uppercase;/*小写变大写*/
-    position: relative;
-}
-
-kbd > button{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: none;
-}
-
-kbd:hover > button{
-    display: inline-block;
-}
-
-/* body{
-    height: 100vh;
-} */
-
-body{
-    background: grey url(./img/wall.jpg) no-repeat center center;
+body {
+    background: white url(./img/wall.jpg) no-repeat center center;
     background-size: cover;
 }
 
-/*页面居中*/
-main{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+kbd {
+    border: 1px solid red;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    /* 变为大写 */
+    text-transform: uppercase;
+    position: relative;
 }
 
-#main{
+kbd>button {
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    display: none;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+kbd:hover>button {
     display: inline-block;
 }
 
-#main > div:nth-child(2){
-    margin-left: -22px;
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#main > div:nth-child(3){
-    margin-left: -80px;
-}
-
-.wrapper{
+.wrapper {
+    display: inline-block;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
 
-.key{
+.wrapper>div:nth-child(1) {
+    margin-left: -25px;
+}
+
+.wrapper>div:nth-child(2) {
+    margin-left: 30px;
+}
+
+.wrapper>div:nth-child(3) {
+    margin-left: 10px;
+}
+
+.wrapper>div:nth-child(4) {
+    margin-left: -55px;
+}
+
+.key {
     width: 50px;
     height: 40px;
-    background: radial-gradient(ellipse at center, #292929 0%,#111111 100%);
-    border: 1px solid #373737;
-    color: #C5C5C5;
-    border-radius: 6px;
-    box-shadow: 0 0 0 1px #1A1B1C,0 0 0 2px #1F2020,0 3px 0 2px #080808;
+    background: radial-gradient(ellipse at center, rgba(41, 41, 41, 1) 0%, rgba(17, 17, 17, 1) 100%);
+    border: 1px solid #282828;
+    color: #d0d0d0;
+    border-radius: 7px;
+    box-shadow: 0 0 0 1px #161718, 0 0 0 2px #1b1c1d, 0 3px 0 2px #060606;
+    margin: 10px;
     font-size: 16px;
     font-family: Helvetica;
     position: relative;
 }
 
-.row{
-    margin: 20px;
-}
-
-.row .key{
-    margin: 0 10px;
-}
-
-.key img{
+.key img {
     width: 16px;
     height: 16px;
     position: absolute;
-    left: 4px;
-    bottom: 2px;
+    left: 3px;
+    bottom: 1px;
+    border-radius: 4px;
 }
 
-.key .text{
+.key .text {
     position: absolute;
     left: 4px;
     top: 2px;
-}
-
-.key > button{
-    border-radius: 5px;
-    /* border: 1px solid red; */
-    font-size: 11px;
-    font-family: kaiti;
 }
