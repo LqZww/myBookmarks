@@ -32,6 +32,10 @@ kbd:hover>button {
     display: inline-block;
 }
 
+kbd>button:hover {
+    color: #1795e2;
+}
+
 main {
     height: 100vh;
     display: flex;
@@ -89,4 +93,5 @@ main {
     position: absolute;
     left: 4px;
     top: 2px;
+    color: #999999;
 }

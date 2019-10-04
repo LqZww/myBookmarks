@@ -42,7 +42,6 @@ if (hashInLocalStorage) {
     hash = hashInLocalStorage
 }
 
-
 // 遍历keys，生成kbd标签
 for (var index = 0; index < keys.length; index++) {
     var div1 = tag('div')// 创建一个div标签
@@ -71,7 +70,6 @@ for (var index = 0; index < keys.length; index++) {
     }
 }
 
-
 // 监听键盘事件
 document.onkeypress = function (x) {
     var key = x['key']// 知道用户按了什么键
@@ -81,7 +79,6 @@ document.onkeypress = function (x) {
     // location.href = 'http://' + website
     window.open('http://' + website, '_blank')// 新窗口打开页面
 }
-
 
 function getFromLocalStorage(name) {
     return JSON.parse(localStorage.getItem(name) || 'null')
@@ -97,6 +94,7 @@ function createSpan(textContent) {
     span1.className = "text"
     return span1
 }
+
 function createButton(id) {
     // 在kbd标签里面添加button按钮
     var button1 = tag('button')
@@ -121,6 +119,7 @@ function createButton(id) {
     }
     return button1
 }
+
 function createImage(domain) {
     var img1 = tag('img')
     if (domain) {
@@ -135,4 +134,3 @@ function createImage(domain) {
     }
     return img1
 }
-
