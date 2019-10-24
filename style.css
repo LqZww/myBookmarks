@@ -14,7 +14,6 @@ kbd {
     display: inline-block;
     width: 4em;
     height: 4em;
-    /* 变为大写 */
     text-transform: uppercase;
     position: relative;
 }
