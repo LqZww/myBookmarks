@@ -94,3 +94,9 @@ main {
     top: 2px;
     color: #999999;
 }
+
+@media (max-width:731px) {
+    .wrapper {
+        display: flex;
+    }
+}

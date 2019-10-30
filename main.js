@@ -108,7 +108,7 @@ function createButton(id) {
         var img2 = button2.previousSibling
 
         var key = button2.id
-        var x = prompt('给我一个网址')
+        var x = prompt('请输入想要更改的网址吧😜')
         hash[key] = x// hash变更
         img2.src = 'http://' + x + '/favicon.ico'
         img2.onerror = function (xxx) {
