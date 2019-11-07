@@ -7,7 +7,7 @@ var keys = {
 }
 
 var hash = {
-    '1': 'zhouwanwen.top',
+    '1': 'zhouwanwen.com',
     'q': 'qianduan.group',
     'w': 'www.w3cschool.cn',
     'e': 'es6.ruanyifeng.com',
